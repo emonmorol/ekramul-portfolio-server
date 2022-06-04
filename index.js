@@ -26,7 +26,12 @@ app.post("/email", async (req, res) => {
       from: email,
       to: "ekramulhasanmorol@gmail.com",
       subject: subject,
-      text: message,
+      text: `
+      ${name} 
+      ${phone}
+      
+      ${message}}
+      `,
     },
     (err, info) => {
       if (err) {
